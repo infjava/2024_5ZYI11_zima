@@ -1,33 +1,47 @@
 public class Kalkulacka {
     private double medzivysledok;
+    private char operator;
     
     public Kalkulacka() {
         this.medzivysledok = 0;
+        this.operator = '+';
     }
     
     public void zadaj(double cislo) {
-        this.medzivysledok = cislo;
-    }
-    
-    public void pricitaj(double cislo) {
-        //this.medzivysledok = this.medzivysledok + cislo;
-        this.medzivysledok += cislo;
-    }
-    
-    public void odcitaj(double cislo) {
-        this.medzivysledok -= cislo;
-    }
-    
-    public void vynasob(double cislo) {
-        this.medzivysledok *= cislo;
-    }
-    
-    public void vydel(double cislo) {
-        if (cislo == 0) {
-            System.out.println("Cannot divide by zero");
-        } else {
-            this.medzivysledok /= cislo;
+        switch (this.operator) {
+            case '+':
+                this.medzivysledok += cislo;
+                break;
+            case '-':
+                this.medzivysledok -= cislo;
+                break;
+            case '*':
+                this.medzivysledok *= cislo;
+                break;
+            case '/':
+                if (cislo == 0) {
+                    System.out.println("Cannot divide by zero");
+                } else {
+                    this.medzivysledok /= cislo;
+                }
+                break;
         }
+    }
+    
+    public void pricitaj() {
+        this.operator = '+';
+    }
+    
+    public void odcitaj() {
+        this.operator = '-';
+    }
+    
+    public void vynasob() {
+        this.operator = '*';
+    }
+    
+    public void vydel() {
+        this.operator = '/';
     }
     
     public void druhaMocnina() {
