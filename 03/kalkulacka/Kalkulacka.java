@@ -52,11 +52,16 @@ public class Kalkulacka {
     
     public void druhaOdmocnina() {
         double vysledok = this.medzivysledok;
+        double kontrolnyVysledok;
         
-        for (int i = 0; i < 100; i++) {
+        // int i = 0;
+        do {
+            kontrolnyVysledok = vysledok;
             vysledok = (vysledok + this.medzivysledok / vysledok) / 2;
-        }
+            // i++;
+        } while ((kontrolnyVysledok - vysledok) >= 0.0001);
         
+        // System.out.println(i);
         this.medzivysledok = vysledok;
     }
     
