@@ -34,6 +34,16 @@ public class Kalkulacka {
         this.medzivysledok *= this.medzivysledok;
     }
     
+    public void mocnina(int n) {
+        double vysledok = 1;
+        
+        for (int i = 0; i < n; i++) {
+            vysledok *= this.medzivysledok;
+        }
+        
+        this.medzivysledok = vysledok;
+    }
+    
     public double getVysledok() {
         return this.medzivysledok;
     }
