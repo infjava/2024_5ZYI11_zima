@@ -50,6 +50,16 @@ public class Kalkulacka {
         this.medzivysledok = vysledok;
     }
     
+    public void druhaOdmocnina() {
+        double vysledok = this.medzivysledok;
+        
+        for (int i = 0; i < 100; i++) {
+            vysledok = (vysledok + this.medzivysledok / vysledok) / 2;
+        }
+        
+        this.medzivysledok = vysledok;
+    }
+    
     public double getVysledok() {
         return this.medzivysledok;
     }
