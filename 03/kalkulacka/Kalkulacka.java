@@ -23,7 +23,11 @@ public class Kalkulacka {
     }
     
     public void vydel(double cislo) {
-        this.medzivysledok /= cislo;
+        if (cislo == 0) {
+            System.out.println("Cannot divide by zero");
+        } else {
+            this.medzivysledok /= cislo;
+        }
     }
     
     public double getVysledok() {
