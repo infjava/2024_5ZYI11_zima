@@ -30,6 +30,10 @@ public class Kalkulacka {
         }
     }
     
+    public void druhaMocnina() {
+        this.medzivysledok *= this.medzivysledok;
+    }
+    
     public double getVysledok() {
         return this.medzivysledok;
     }
