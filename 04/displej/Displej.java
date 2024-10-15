@@ -8,21 +8,21 @@ public class Displej {
     private Segment segmentF;
     private Segment segmentG;
     
-    public Displej() {
+    public Displej(int x, int y) {
         this.pozadie = new Obdlznik();
-        this.pozadie.posunVodorovne(-60);
-        this.pozadie.posunZvisle(-50);
+        this.pozadie.posunVodorovne(x - 60);
+        this.pozadie.posunZvisle(y - 50);
         this.pozadie.zmenFarbu("black");
         this.pozadie.zmenStrany(60, 115);
         this.pozadie.zobraz();
         
-        this.segmentA = new Segment(5, 0, false);
-        this.segmentB = new Segment(55, 5, true);
-        this.segmentC = new Segment(55, 60, true);
-        this.segmentD = new Segment(5, 110, false);
-        this.segmentE = new Segment(0, 60, true);
-        this.segmentF = new Segment(0, 5, true);
-        this.segmentG = new Segment(5, 55, false);
+        this.segmentA = new Segment(x + 5, y, false);
+        this.segmentB = new Segment(x + 55, y + 5, true);
+        this.segmentC = new Segment(x + 55, y + 60, true);
+        this.segmentD = new Segment(x + 5, y + 110, false);
+        this.segmentE = new Segment(x, y + 60, true);
+        this.segmentF = new Segment(x, y + 5, true);
+        this.segmentG = new Segment(x + 5, y + 55, false);
     }
     
     public void zmenCislicu(int cislica) {
