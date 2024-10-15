@@ -17,10 +17,10 @@ public class Segment {
     }
     
     public void zapni() {
-        
+        this.segment.zmenFarbu("yellow");
     }
     
     public void vypni() {
-        
+        this.segment.zmenFarbu("red");
     }
 }
