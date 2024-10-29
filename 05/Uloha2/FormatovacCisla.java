@@ -34,16 +34,8 @@ public class FormatovacCisla {
      * @return Formatovane cislo s danym poctom desatinnych miest.
      */
     public String getCislo(int pocetDesatinnychMiest) {
-        switch (pocetDesatinnychMiest) {
-            case 1:
-                return String.format("%.1f", this.cislo);
-            case 2:
-                return String.format("%.2f", this.cislo);
-            case 3:
-                return String.format("%.3f", this.cislo);
-        }
-        
-        return String.format("%.0f", this.cislo);
+        String format = "%." + pocetDesatinnychMiest + "f";
+        return String.format(format, this.cislo);
     }
     
     /**
