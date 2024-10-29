@@ -36,5 +36,13 @@ public class KalkulackaTest {
         kalkulacka.pripocitaj(0);
         Assert.assertEquals(5, kalkulacka.getVysledok(), 0.000001);
     }
+
+    @Test
+    public void spocitaj5aMinus3() {
+        Kalkulacka kalkulac1 = new Kalkulacka();
+        kalkulac1.zadajCislo(5);
+        kalkulac1.pripocitaj(-3);
+        Assert.assertEquals(2, kalkulac1.getVysledok(), 0.00001);
+    }
 }
 
