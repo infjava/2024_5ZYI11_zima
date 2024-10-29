@@ -13,15 +13,21 @@ public class CirkusStringerto {
     }
     
     public String getRetazec() {
-        return "";
+        return this.retazec;
     }   
 
     public void setRetazec(String novyRetazec) {
-        
+        this.retazec = novyRetazec;
     }
     
     public String opakujRetazec(int pocet) {
-        return this.retazec;
+        String vysledok = "";
+        
+        for (int i = 0; i < pocet; i++) {
+            vysledok += this.retazec;
+        }
+        
+        return vysledok;
     }
     
     public boolean jePalindrom() {
