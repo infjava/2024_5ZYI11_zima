@@ -53,8 +53,8 @@ public class FormatovacCisla {
      * @return Formatovane cislo zarovnane doprava.
      */
     public String getCisloZarovnajVpravo(int pocetDesatinnychMiest, int pocetZnakov) {
-        // TODO Doprogramujte:
-        return "";
+        String format = "%" + pocetZnakov + "." + pocetDesatinnychMiest + "f";
+        return String.format(format, this.cislo);
     }
 
     /**
@@ -64,7 +64,7 @@ public class FormatovacCisla {
      * @return Formatovane cislo zarovnane dolava.
      */
     public String getCisloZarovnajVlavo(int pocetDesatinnychMiest, int pocetZnakov) {
-        // TODO Doprogramujte:
-        return "";
+        String format = "%-" + pocetZnakov + "." + pocetDesatinnychMiest + "f";
+        return String.format(format, this.cislo);
     }
 }
