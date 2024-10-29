@@ -27,8 +27,10 @@ public class CirkusStringerto {
     public boolean jePalindrom() {
         for (int i = 0; i < this.retazec.length(); i++) {
             int iOdKonca = this.retazec.length() - 1 - i;
+            char znakOdZaciatku = Character.toLowerCase(this.retazec.charAt(i));
+            char znakOdKonca = Character.toLowerCase(this.retazec.charAt(iOdKonca));
             
-            if (this.retazec.charAt(i) != this.retazec.charAt(iOdKonca)) {
+            if (znakOdZaciatku != znakOdKonca) {
                 return false;
             }
         }
