@@ -34,7 +34,7 @@ public class FormatovacCisla {
      * @return Formatovane cislo s danym poctom desatinnych miest.
      */
     public String getCislo(int pocetDesatinnychMiest) {
-        String format = "%." + pocetDesatinnychMiest + "f";
+        String format = String.format("%%.%df", pocetDesatinnychMiest);
         return String.format(format, this.cislo);
     }
     
@@ -53,7 +53,7 @@ public class FormatovacCisla {
      * @return Formatovane cislo zarovnane doprava.
      */
     public String getCisloZarovnajVpravo(int pocetDesatinnychMiest, int pocetZnakov) {
-        String format = "%" + pocetZnakov + "." + pocetDesatinnychMiest + "f";
+        String format = String.format("%%%d.%df", pocetZnakov, pocetDesatinnychMiest);
         return String.format(format, this.cislo);
     }
 
@@ -64,7 +64,7 @@ public class FormatovacCisla {
      * @return Formatovane cislo zarovnane dolava.
      */
     public String getCisloZarovnajVlavo(int pocetDesatinnychMiest, int pocetZnakov) {
-        String format = "%-" + pocetZnakov + "." + pocetDesatinnychMiest + "f";
+        String format = String.format("%%-%d.%df", pocetZnakov, pocetDesatinnychMiest);
         return String.format(format, this.cislo);
     }
 }
