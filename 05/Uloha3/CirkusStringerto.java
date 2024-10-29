@@ -21,13 +21,7 @@ public class CirkusStringerto {
     }
     
     public String opakujRetazec(int pocet) {
-        StringBuilder vysledok = new StringBuilder();
-        
-        for (int i = 0; i < pocet; i++) {
-            vysledok.append(this.retazec);
-        }
-        
-        return vysledok.toString();
+        return this.retazec.repeat(pocet);
     }
     
     public boolean jePalindrom() {
