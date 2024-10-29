@@ -25,6 +25,14 @@ public class CirkusStringerto {
     }
     
     public boolean jePalindrom() {
+        for (int i = 0; i < this.retazec.length(); i++) {
+            int iOdKonca = this.retazec.length() - 1 - i;
+            
+            if (this.retazec.charAt(i) != this.retazec.charAt(iOdKonca)) {
+                return false;
+            }
+        }
+        
         return true;
     }
     
