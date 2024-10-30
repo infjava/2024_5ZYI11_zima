@@ -39,7 +39,9 @@ public class CirkusStringerto {
     }
     
     public void posuvaj(int pocetKrokov) {
-        
+        for (int i = 0; i < pocetKrokov; i++) {
+            System.out.format("|%" + (i + this.retazec.length()) + "s|%n", this.retazec);
+        }
     }       
        
 }
