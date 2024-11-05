@@ -15,4 +15,8 @@ public class Hrac {
     public void posunHore() {
         this.ruka.nasledujuca();
     }
+    
+    public int getAktualneGesto() {
+        return this.ruka.getGesto();
+    }
 }

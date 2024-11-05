@@ -16,4 +16,8 @@ public class Pocitac {
         int gesto = this.nahodneCisla.nextInt(5);
         this.ruka.setGesto(gesto);
     }
+    
+    public int getAktualneGesto() {
+        return this.ruka.getGesto();
+    }
 }

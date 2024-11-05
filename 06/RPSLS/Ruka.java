@@ -10,6 +10,10 @@ public class Ruka {
         this.aktualneGesto = 0;
     }
     
+    public int getGesto() {
+        return this.aktualneGesto;
+    }
+    
     public void setGesto(int cislo) {
         switch (cislo) {
             case 0:
