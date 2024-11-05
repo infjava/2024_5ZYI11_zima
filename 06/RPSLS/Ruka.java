@@ -28,15 +28,15 @@ public class Ruka {
                 this.obrazokRuky.zmenObrazok("pics/lizard.png");
                 break;
         }
+        
+        this.aktualneGesto = cislo;
     }
     
     public void predchadzajuca() {
-        this.aktualneGesto = (this.aktualneGesto + 4) % 5;
-        this.setGesto(this.aktualneGesto);
+        this.setGesto((this.aktualneGesto + 4) % 5);
     }
     
     public void nasledujuca() {
-        this.aktualneGesto = (this.aktualneGesto + 1) % 5;
-        this.setGesto(this.aktualneGesto);
+        this.setGesto((this.aktualneGesto + 1) % 5);
     }
 }
