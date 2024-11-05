@@ -31,12 +31,12 @@ public class Ruka {
     }
     
     public void predchadzajuca() {
-        this.aktualneGesto--;
+        this.aktualneGesto = (this.aktualneGesto + 4) % 5;
         this.setGesto(this.aktualneGesto);
     }
     
     public void nasledujuca() {
-        this.aktualneGesto++;
+        this.aktualneGesto = (this.aktualneGesto + 1) % 5;
         this.setGesto(this.aktualneGesto);
     }
 }
