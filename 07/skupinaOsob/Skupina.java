@@ -26,8 +26,13 @@ public class Skupina {
     }
         
     public void vypisClenovSkupiny() {
-        // Doplnit!
-        // Ukazat vsetky 3 cykly - foreach, while s lokalnou premennou aj for (pristup k prvkom cez get(i)
+        if (!this.osoby.isEmpty()) {
+            int index = 0;
+            do {
+                this.osoby.get(index).vypis();
+                index++;
+            } while (index < this.osoby.size());
+        }
     }
     
     public void odstranPodlaPoradia(int poradie) {
