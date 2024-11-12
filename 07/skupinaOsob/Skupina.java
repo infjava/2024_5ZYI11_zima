@@ -16,8 +16,12 @@ public class Skupina {
     }
     
     public boolean jeClenomSkupiny(Osoba hladanaOsoba) {
-        // Doplnit!
-        // Poznamka: V metóde nepouzivajte vetvenie (prikaz IF)!
+        for (Osoba aktualna : this.osoby) {
+            if (aktualna == hladanaOsoba) {
+                return true;
+            }
+        }
+        
         return false;
     }
         
