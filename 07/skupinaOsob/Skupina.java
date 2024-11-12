@@ -26,12 +26,10 @@ public class Skupina {
     }
         
     public void vypisClenovSkupiny() {
-        if (!this.osoby.isEmpty()) {
-            int index = 0;
-            do {
-                this.osoby.get(index).vypis();
-                index++;
-            } while (index < this.osoby.size());
+        int index = 0;
+        while (index < this.osoby.size()) {
+            this.osoby.get(index).vypis();
+            index++;
         }
     }
     
