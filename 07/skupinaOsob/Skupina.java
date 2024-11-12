@@ -8,12 +8,11 @@ public class Skupina {
     }
     
     public void pridajObjektOsoba(Osoba novaOsoba) {
-        // Doplnit!
+        this.osoby.add(novaOsoba);
     }
     
     public void pridajNovuOsobu(String noveMeno, String novePriezvisko) {
-        // Doplnit!
-        // Poznamka: Vysvetlit anonymny objekt.
+        this.osoby.add(new Osoba(noveMeno, novePriezvisko));
     }
     
     public boolean jeClenomSkupiny(Osoba hladanaOsoba) {
