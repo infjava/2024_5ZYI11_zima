@@ -26,8 +26,8 @@ public class Skupina {
     }
         
     public void vypisClenovSkupiny() {
-        for (int index = 0; index < this.osoby.size(); index++) {
-            this.osoby.get(index).vypis();
+        for (Osoba aktualna : this.osoby) {
+            aktualna.vypis();
         }
     }
     
