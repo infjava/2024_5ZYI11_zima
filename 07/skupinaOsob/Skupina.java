@@ -16,14 +16,7 @@ public class Skupina {
     }
     
     public boolean jeClenomSkupiny(Osoba hladanaOsoba) {
-        for (Osoba aktualna : this.osoby) {
-            if (aktualna.getMeno().equals(hladanaOsoba.getMeno())
-                    && aktualna.getPriezvisko().equals(hladanaOsoba.getPriezvisko())) {
-                return true;
-            }
-        }
-        
-        return false;
+        return this.osoby.contains(hladanaOsoba);
     }
         
     public int getPocetClenovSkupiny() {
