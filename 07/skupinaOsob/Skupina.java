@@ -49,8 +49,6 @@ public class Skupina {
     }
     
     public void zrusSkupinu() {
-        while (!this.osoby.isEmpty()) {
-            this.osoby.remove(0);
-        }
+        this.osoby.clear();
     }
 }
