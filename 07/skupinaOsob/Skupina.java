@@ -17,7 +17,8 @@ public class Skupina {
     
     public boolean jeClenomSkupiny(Osoba hladanaOsoba) {
         for (Osoba aktualna : this.osoby) {
-            if (aktualna == hladanaOsoba) {
+            if (aktualna.getMeno().equals(hladanaOsoba.getMeno())
+                    && aktualna.getPriezvisko().equals(hladanaOsoba.getPriezvisko())) {
                 return true;
             }
         }
