@@ -6,8 +6,19 @@ public class Vektor {
     }
     
     public double skalarnySucin(Vektor vektorB) {
-        // doplnit kod
-        return 0;
+        if (this.vektor.length != vektorB.getDlzka()) {
+            System.out.println("Vektory musia byt rovnako dlhe");
+            return Double.NaN;
+        }
+        
+        double vysledok = 0;
+        
+        for (int index = 0; index < this.vektor.length; index++) {
+            double sucin = this.vektor[index] * vektorB.getPrvok(index);
+            vysledok += sucin;
+        }
+        
+        return vysledok;
     }
     
     public double getPrvok(int index) {
