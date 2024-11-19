@@ -10,13 +10,14 @@ public class Matica {
     }
     
     public int getPocetRiadkov() {
-        // opravit
-        return 0;
+        return this.matica.length;
     }
     
     public int getPocetStlpcov() {
-        // opravit
-        return 0;
+        if (this.matica.length == 0) {
+            return 0;
+        }
+        return this.matica[0].length;
     }
     
     public void vypisMaticu() {
