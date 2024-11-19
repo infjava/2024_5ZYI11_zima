@@ -38,4 +38,24 @@ public class Mapa {
     public void zasiahni(int x, int y) {
         this.stvorceky[y][x].zasiahni();
     }
+    
+    public boolean jePolicko(int x, int y) {
+        if (x < 0) {
+            return false;
+        }
+        
+        if (y < 0) {
+            return false;
+        }
+        
+        if (x >= this.stvorceky[0].length) {
+            return false;
+        }
+        
+        if (y >= this.stvorceky.length) {
+            return false;
+        }
+        
+        return true;
+    }
 }
