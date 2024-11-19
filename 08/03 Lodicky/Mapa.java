@@ -34,4 +34,8 @@ public class Mapa {
         
         mapa.close();
     }
+    
+    public void zasiahni(int x, int y) {
+        this.stvorceky[y][x].zasiahni();
+    }
 }
