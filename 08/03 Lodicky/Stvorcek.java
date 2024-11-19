@@ -21,10 +21,21 @@ public class Stvorcek {
             this.stvorec.zmenFarbu("#B2BEB5");
         } else {
             this.stvorec.zmenFarbu("red");
+            
+            this.lodka.skontrolujZnicenie();
         }
+    }
+    
+    public void znic() {
+        this.stvorec.zmenFarbu("black");
+    }
+    
+    public boolean jeTrafeny() {
+        return this.trafena;
     }
     
     public void polozLodku(Lodka lodka) {
         this.lodka = lodka;
+        this.lodka.priradStvorcek(this);
     }
 }
