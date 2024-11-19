@@ -10,7 +10,7 @@ public class Stvorcek {
         this.lodka = null;
         
         this.stvorec = new Stvorec(x * 30, y * 30);
-        this.stvorec.zmenStranu(30);
+        this.stvorec.zmenStranu(29);
         this.stvorec.zmenFarbu("blue");
         this.stvorec.zobraz();
     }
