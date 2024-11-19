@@ -14,4 +14,13 @@ public class Stvorcek {
         this.stvorec.zmenFarbu("blue");
         this.stvorec.zobraz();
     }
+    
+    public void zasiahni() {
+        this.trafena = true;
+        if (!this.lodka) {
+            this.stvorec.zmenFarbu("#B2BEB5");
+        } else {
+            this.stvorec.zmenFarbu("red");
+        }
+    }
 }
