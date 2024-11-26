@@ -8,6 +8,10 @@ public class ZoznamTimov {
     }
     
     public boolean pridajTim(Tim tim) {
+        if (this.getTim(tim.getNazovTimu()) != null) {
+            return false;
+        }
+        
         this.timy.add(tim);
         return true;
     }
