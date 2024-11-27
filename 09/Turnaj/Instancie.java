@@ -26,5 +26,18 @@ public class Instancie {
             new String[] {"Zilinsky vlci", "Piros Balaton", "Sparta Praha", "Slovan Bratislava"},
             this.liga
         );
+        
+        this.turnaj.vlozVysledokDoTabulky(Vysledok.VYHRA, 0, 1);
+        this.turnaj.vlozVysledokDoTabulky(Vysledok.REMIZA, 0, 2);
+        this.turnaj.vlozVysledokDoTabulky(Vysledok.REMIZA, 0, 3);
+        this.turnaj.vlozVysledokDoTabulky(Vysledok.PREHRA, 1, 0);
+        this.turnaj.vlozVysledokDoTabulky(Vysledok.PREHRA, 1, 2);
+        this.turnaj.vlozVysledokDoTabulky(Vysledok.PREHRA, 1, 3);
+        this.turnaj.vlozVysledokDoTabulky(Vysledok.VYHRA, 2, 0);
+        this.turnaj.vlozVysledokDoTabulky(Vysledok.VYHRA, 2, 1);
+        this.turnaj.vlozVysledokDoTabulky(Vysledok.PREHRA, 2, 3);
+        this.turnaj.vlozVysledokDoTabulky(Vysledok.PREHRA, 3, 0);
+        this.turnaj.vlozVysledokDoTabulky(Vysledok.VYHRA, 3, 1);
+        this.turnaj.vlozVysledokDoTabulky(Vysledok.PREHRA, 3, 2);
     }
 }
