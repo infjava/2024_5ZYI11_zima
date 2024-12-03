@@ -1,6 +1,8 @@
 import fri.shapesge.Obrazok;
 
 public class CastVlaku {
+    private static final int VELKOST_BUNKY = 35;
+    
     private Poloha poloha;
     private final Obrazok obrazok;
     private CastVlaku dalsiaCast;
@@ -29,7 +31,19 @@ public class CastVlaku {
             this.dalsiaCast.pripojCast(novaDalsiaCast);
         } else {
             this.dalsiaCast = novaDalsiaCast;
-            this.dalsiaCast.setPoloha(this.poloha.getPosunutaPoloha(-35, this.poloha.getSmer()));
+            this.dalsiaCast.setPoloha(this.poloha.getPosunutaPoloha(-CastVlaku.VELKOST_BUNKY, this.poloha.getSmer()));
         }
+    }
+    
+    public void pohniNaNovuPoziciu(Smer smer) {
+        this.pohniNaNovuPoziciu(this.poloha.getPosunutaPoloha(CastVlaku.VELKOST_BUNKY, smer));
+    }
+    
+    private void pohniNaNovuPoziciu(Poloha poloha) {
+        if (this.dalsiaCast != null) {
+            this.dalsiaCast.pohniNaNovuPoziciu(this.poloha);
+        }
+        
+        this.setPoloha(poloha);
     }
 }
