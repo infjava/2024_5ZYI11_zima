@@ -1,21 +1,28 @@
 public enum Smer {
-    HORE,
-    DOLE,
-    VPRAVO,
-    VLAVO;
+    HORE(90, 0, -1),
+    DOLE(-90, 0, 1),
+    VPRAVO(180, 1, 0),
+    VLAVO(0, -1, 0);
+    
+    private final int uhol;
+    private final int vektorX;
+    private final int vektorY;
+    
+    Smer(int uhol, int vektorX, int vektorY) {
+        this.uhol = uhol;
+        this.vektorX = vektorX;
+        this.vektorY = vektorY;
+    }
+    
+    public int getUhol() {
+        return this.uhol;
+    }
     
     public int getVektorX() {
-        switch (this) {
-            case HORE:
-                return 0;
-            case DOLE:
-                return 0;
-            case VPRAVO:
-                return 1;
-            case VLAVO:
-                return -1;
-            default:
-                return -100;
-        }
+        return this.vektorX;
+    }
+    
+    public int getVektorY() {
+        return this.vektorY;
     }
 }
